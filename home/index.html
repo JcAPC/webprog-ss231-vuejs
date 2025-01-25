@@ -3,10 +3,103 @@
 <head>
   <title>My first Vue page</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flexbox-grid.css?version=0.1">
+
 </head>
 <body>
-  <h1>Example with JavaScript inside {{ }}</h1>
-  <p>The 'message' text from the Vue instance is put together with another text and a JavaScript expression.  The JavaScript expression creates a random integer between 1 and 6.</p>
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">WEBPROG Midterms</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<div id="home" class="p-5 text-center bg-image" style="background-image: url('image/IMG20230707131109.jpg'); height: 400px;">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+            <h1 class="mb-3">Welcome to My Midterm Project</h1>
+            <a class="btn btn-outline-light btn-lg" href="#about" role="button">Learn More</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- About Me Section -->
+<div id="about" class="container mt-5">
+<h2 class="text-center mb-4" style="color: #fff;">About Me</h2>
+<div class="row">
+    <div class="col-md-6" data-aos="fade-up">
+        <div class="card bg-white text-dark">
+            <img src="image/852032892_18967916584_1736265550138.png" class="card-img-top" alt="Achievement">
+            <div class="card-body text-center">
+                <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Achievement</h5>
+                <p class="card-text">
+                    - 1st place in "Best in Cinematography"<br>
+                    - With Honors in Grade 12
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-white text-dark">
+            <img src="image/852032892_18967916584_1736267744020.png" class="card-img-top" alt="Personal Information">
+            <div class="card-body text-center">
+                <i class="fas fa-user fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Personal Information</h5>
+                <p class="card-text">
+                    - Jesmark David C. Presbitero<br>
+                    - From Lubao, Pampanga<br>
+                    - Born on July 19, 2004<br>
+                    - Currently 20 years old
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-6" data-aos="fade-up">
+        <div class="card bg-white text-dark">
+            <img src="image/852032892_18967916584_1736268515693.png" class="card-img-top" alt="Hobbies">
+            <div class="card-body text-center">
+                <i class="fas fa-motorcycle fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Hobbies</h5>
+                <p class="card-text">
+                    - Driving and Motorcycles<br>
+                    - Playing Games<br>
+                    - Petting Cats
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-white text-dark">
+            <img src="image/852032892_18967916584_1736272229417.png" class="card-img-top" alt="Dreams">
+            <div class="card-body text-center">
+                <i class="fas fa-star fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Dreams</h5>
+                <p class="card-text">
+                    - Make my parents proud<br>
+                    - Succeed in life<br>
+                    - Help people in need<br>
+                    - Become a more religious person
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
   <div id="app">
     {{ message }} <br>
