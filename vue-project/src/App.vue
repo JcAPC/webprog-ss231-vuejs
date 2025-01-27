@@ -1,7 +1,12 @@
-<script></script>
-
 <template>
-  <h1> Hello WEBPROGSS231 World!</h1>
+  <h1>Food</h1>
+  <food-item/> <br>
+  <food-item/> <br>
+  <food-item/> <br>
+  
 </template>
 
-<style></style>
+<script></script>
+
+<style>
+</style>           
