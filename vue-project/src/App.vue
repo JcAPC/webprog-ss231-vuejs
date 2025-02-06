@@ -5,17 +5,8 @@ import { supabase } from './lib/supabaseClient'
 const countries = ref([])
 
 async function getCountries() {
-  try {
-    const { data, error } = await supabase.from('countries').select()
-    
-    if (error) {
-      throw new Error(error.message)
-    }
-
-    countries.value = data
-  } catch (err) {
-    console.error('Error fetching countries:', err)
-  }
+  const { data } = await supabase.from('countries').select()
+  countries.value = data
 }
 
 onMounted(() => {
@@ -24,17 +15,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <h1>Countries</h1>
-    <ul>
-      <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
-    </ul>
 
-    <h1>Food</h1>
-    <food-item/> <br>
-    <food-item2/> <br>
-    <personal-profile/>
-  </div>
+  <ul>
+    <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
+  </ul>
+
+  <h1>Food</h1>
+  <food-item/> <br>
+  <food-item2/> <br>
+  <personal-profile/>
 </template>
+
+
 
 <style></style>

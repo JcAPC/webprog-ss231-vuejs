@@ -1,12 +1,31 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import FoodItem from './components/FoodItem.vue'
-import FoodItem2 from './components/FoodItem2.vue'
-import PersonalProfile from './components/PersonalProfile.vue'
+<script setup>
+import { ref, onMounted } from 'vue'
+import { supabase } from './lib/supabaseClient'
+
+const countries = ref([])
+
+async function getCountries() {
+  const { data } = await supabase.from('countries').select()
+  countries.value = data
+}
+
+onMounted(() => {
+  getCountries()
+})
+</script>
+
+<template>
+
+  <ul>
+    <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
+  </ul>
+
+  <h1>Food</h1>
+  <food-item/> <br>
+  <food-item2/> <br>
+  <personal-profile/>
+</template>
 
 
-const app = createApp(App)
-app.component('food-item', FoodItem)
-app.component('food-item2', FoodItem2)
-app.component('personal-profile', PersonalProfile)
-app.mount('#app')
+
+<style></style>
