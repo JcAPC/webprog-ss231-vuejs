@@ -24,6 +24,7 @@ onMounted(() => {
   <food-item/> <br>
   <food-item2/> <br>
   <personal-profile/>
+  <rest-api/>
 </template>
 
 
